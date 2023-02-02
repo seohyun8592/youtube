@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
-import { BsYoutube } from 'react-icons/bs';
+import { BsSearch, BsYoutube } from 'react-icons/bs';
 
 export default function HeaderSearch() {
   const { keyword } = useParams();
@@ -17,22 +17,24 @@ export default function HeaderSearch() {
 
   useEffect(() => setText(keyword || ''), [keyword]);
   return (
-    <header className="flex items-center h-14">
+    <header className="flex items-center h-14 px-5">
       <Link to="/" className="flex items-center">
         <BsYoutube className="logo " />
-        <h1 className="ml-1 ">YouTube</h1>
+        <h1 className="ml-1 text-lg">YouTube</h1>
       </Link>
 
-      <div className="flex items-center flex-auto h-10 mx-10 border border-solid border-black roun">
+      <div className="flex items-center flex-auto h-10 ml-10 border border-solid border-black roun px-3">
         <div className="flex-auto">
           <input
             type="text"
             onChange={handleChange}
             value={text}
-            className="px-3"
+            className=""
           />
         </div>
-        <button onClick={handleClick}>검색</button>
+        <button onClick={handleClick}>
+          <BsSearch className="btn__search" />
+        </button>
       </div>
     </header>
   );
