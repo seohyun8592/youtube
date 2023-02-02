@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 export class Youtube {
   constructor(apiClient) {
     this.apiClient = apiClient;
