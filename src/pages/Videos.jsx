@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { useYoutubeApi } from '../context/YoutubeApiContext';
-import VideoCard from './VideoCard';
+import VideoCard from '../components/VideoCard';
 
 export default function Videos() {
   const { keyword } = useParams();
@@ -16,7 +16,6 @@ export default function Videos() {
 
   return (
     <div className="contents__wrap pl-5 pr-4">
-      <div>Videos {keyword}</div>
       {isLoading && <p>Loading...</p>}
       {error && <p>Error</p>}
       {videos && (

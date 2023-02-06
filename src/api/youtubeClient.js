@@ -14,4 +14,8 @@ export class YoutubeClient {
   async videos(params) {
     return this.httpClient('videos', params);
   }
+
+  async channels(params) {
+    return this.httpClient('channels', params);
+  }
 }
