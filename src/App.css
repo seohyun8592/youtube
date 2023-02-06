@@ -8,25 +8,28 @@
 .contents__wrap ul {
 }
 .contents__wrap ul li {
-  width: calc(25% - 20px);
-  margin-right: 20px;
+  width: calc(25% - 5px);
+  margin-right: 5px;
   margin-top: 20px;
+}
+.contents__wrap ul li img {
+  width: 100%;
 }
 
 @media (max-width: 1080px) {
   .contents__wrap ul li {
-    width: calc(33.33% - 20px);
+    width: calc(33.33% - 5px);
   }
 }
 
 @media (max-width: 800px) {
   .contents__wrap ul li {
-    width: calc(50% - 20px);
+    width: calc(50% - 5px);
   }
 }
 
 @media (max-width: 480px) {
   .contents__wrap ul li {
-    width: calc(100% - 20px);
+    width: calc(100% - 5px);
   }
 }

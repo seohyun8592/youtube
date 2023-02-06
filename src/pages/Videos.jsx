@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { useYoutubeApi } from '../context/YoutubeApiContext';
+import VideoCard from './VideoCard';
 
 export default function Videos() {
   const { keyword } = useParams();
@@ -14,14 +15,14 @@ export default function Videos() {
   } = useQuery(['videos', keyword], () => youtube.search(keyword));
 
   return (
-    <div className="contents__wrap pl-5">
+    <div className="contents__wrap pl-5 pr-4">
       <div>Videos {keyword}</div>
       {isLoading && <p>Loading...</p>}
       {error && <p>Error</p>}
       {videos && (
         <ul className="flex flex-wrap">
-          {videos.map((i) => (
-            <li key={i.id}>{i.snippet.title}</li>
+          {videos.map((video) => (
+            <VideoCard key={video.id} video={video} />
           ))}
         </ul>
       )}
