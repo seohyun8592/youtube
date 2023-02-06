@@ -4,9 +4,11 @@ import { useYoutubeApi } from '../context/YoutubeApiContext';
 
 export default function ChannelInfo({ id, name }) {
   const { youtube } = useYoutubeApi();
-  const { data: url } = useQuery(['channel', id], () =>
-    youtube.channelImageURL(id)
+  const { data: url } = useQuery(
+    ['channel', id],
+    () => youtube.channelImageURL(id),
+    { staleTime: 1000 * 60 * 5 }
   );
 
-  return <div>{url && <img src={url} art={name} />}</div>;
+  return <div>{url && <img src={url} art="타이틀썸네일" />}</div>;
 }

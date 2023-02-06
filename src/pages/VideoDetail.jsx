@@ -10,8 +10,8 @@ export default function VideoDetail() {
 
   const { title, channelId, channelTitle, description } = video.snippet;
   return (
-    <section>
-      <article>
+    <article className="flex">
+      <section>
         <iframe
           id="player"
           type="text/html"
@@ -19,16 +19,17 @@ export default function VideoDetail() {
           height="640"
           src={`http://www.youtube.com/embed/${video.id}`}
           frameBorder="0"
+          title={title}
         ></iframe>
         <div>
           <h2>{title}</h2>
           <ChannelInfo id={channelId} name={channelTitle} />
           <p>{description}</p>
         </div>
-      </article>
+      </section>
       <section>
         <RelatedVideos id={video.id} />
       </section>
-    </section>
+    </article>
   );
 }
