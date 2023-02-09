@@ -8,14 +8,14 @@ export default class YoutubeClient {
     });
   }
   async search(params) {
-    return this.httpClient('search', params);
+    return this.httpClient.get('search', params);
   }
 
   async videos(params) {
-    return this.httpClient('videos', params);
+    return this.httpClient.get('videos', params);
   }
 
   async channels(params) {
-    return this.httpClient('channels', params);
+    return this.httpClient.get('channels', params);
   }
 }
