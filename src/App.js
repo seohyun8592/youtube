@@ -8,10 +8,6 @@ import { YoutubeApiProvider } from './context/YoutubeApiContext';
 const queryClient = new QueryClient();
 
 export default function App() {
-  // const [list, setList] = useState();
-  // const handleSearch = (text) => {
-  //   setList(text);
-  // };
   return (
     <div className="wrap">
       <HeaderSearch />
