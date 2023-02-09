@@ -1,4 +1,4 @@
-export class Youtube {
+export default class Youtube {
   constructor(apiClient) {
     this.apiClient = apiClient;
   }
