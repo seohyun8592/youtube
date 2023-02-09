@@ -10,5 +10,5 @@ export default function ChannelInfo({ id, name }) {
     { staleTime: 1000 * 60 * 5 }
   );
 
-  return <div>{url && <img src={url} art="타이틀썸네일" />}</div>;
+  return <div>{url && <img src={url} alt="타이틀썸네일" />}</div>;
 }
