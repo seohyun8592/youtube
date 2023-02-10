@@ -17,7 +17,7 @@ export default function VideoCard({ video }) {
         <img src={thumbnails.medium.url} alt={title} />
       </div>
       <div className="item__info">
-        <p className="leading-5 py-3">{title}</p>
+        <p className="leading-5 my-3 line-clamp-2">{title}</p>
         <span className="text-xs">{channelTitle}</span>
         <p className="text-xs">{dateAgo(publishedAt, 'ko')}</p>
       </div>

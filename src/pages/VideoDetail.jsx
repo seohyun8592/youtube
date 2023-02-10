@@ -11,17 +11,21 @@ export default function VideoDetail() {
   const { title, channelId, channelTitle, description } = video.snippet;
   return (
     <div className="contents__wrap">
-      <article className="flex px-5">
-        <section className="w-9/12">
-          <iframe
-            id="player"
-            type="text/html"
-            width="100%"
-            height="640"
-            src={`http://www.youtube.com/embed/${video.id}`}
-            frameBorder="0"
-            title={title}
-          ></iframe>
+      <article className="flex lg:block">
+        <section className="w-9/12 lg:w-full">
+          <div className="w-full pt-1/2 relative">
+            <iframe
+              id="player"
+              className="absolute top-0 left-0"
+              type="text/html"
+              width="100%"
+              height="100%"
+              src={`http://www.youtube.com/embed/${video.id}`}
+              frameBorder="0"
+              title={title}
+            ></iframe>
+          </div>
+
           <div className="pt-5">
             <div className="flex items-center">
               <ChannelInfo id={channelId} name={channelTitle} />
@@ -31,7 +35,7 @@ export default function VideoDetail() {
             <p className="mt-4 rounded-xl bg-gray-100 p-3">{description}</p>
           </div>
         </section>
-        <section className="ml-6 w-1/4">
+        <section className="related__list ml-6 w-1/4 lg:w-full lg:ml-0 lg:mt-9">
           <RelatedVideos id={video.id} />
         </section>
       </article>
