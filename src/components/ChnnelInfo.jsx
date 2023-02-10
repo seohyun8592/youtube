@@ -11,7 +11,7 @@ export default function ChannelInfo({ id, name }) {
   );
 
   return (
-    <div className="w-10 h-10 rounded-full overflow-hidden">
+    <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
       {url && <img className="w-full h-full" src={url} alt={name} />}
     </div>
   );
