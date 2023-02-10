@@ -17,7 +17,7 @@ export default function Videos() {
   });
 
   return (
-    <div className="contents__wrap pl-5 pr-4">
+    <div className="contents__wrap">
       {isLoading && <p>Loading...</p>}
       {error && <p>Error</p>}
       {videos && (

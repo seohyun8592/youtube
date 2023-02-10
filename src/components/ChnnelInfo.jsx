@@ -10,5 +10,9 @@ export default function ChannelInfo({ id, name }) {
     { staleTime: 1000 * 60 * 5 }
   );
 
-  return <div>{url && <img src={url} alt={name} />}</div>;
+  return (
+    <div className="w-10 h-10 rounded-full overflow-hidden">
+      {url && <img className="w-full h-full" src={url} alt={name} />}
+    </div>
+  );
 }
