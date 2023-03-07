@@ -3,7 +3,7 @@
   height: 100%;
 }
 .contents__wrap {
-  padding: 0 1rem;
+  padding: 4.75rem 1rem 0;
 }
 .contents__wrap > ul li {
   width: calc(25% - 5px);

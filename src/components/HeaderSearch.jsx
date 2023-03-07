@@ -17,7 +17,7 @@ export default function HeaderSearch() {
 
   useEffect(() => setText(keyword || ''), [keyword]);
   return (
-    <header className="flex items-center h-14 px-5 mb-5">
+    <header className="flex items-center h-14 px-5 mb-5 fixed w-full bg-white">
       <Link to="/" className="flex items-center">
         <BsYoutube className="logo mt-1" />
         <h1 className="ml-1 text-xl tracking-tighter font-bold">YouTube</h1>
