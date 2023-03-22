@@ -6,7 +6,7 @@ export default function HeaderSearch() {
   const { keyword } = useParams();
   const [text, setText] = useState('');
   const navigate = useNavigate();
-
+  console.log(text)
   const handleChange = (e) => {
     setText(e.target.value);
   };

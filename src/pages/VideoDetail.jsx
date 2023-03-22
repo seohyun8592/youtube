@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import ChannelInfo from '../components/ChnnelInfo';
+import Comments from '../components/Comments';
 import RelatedVideos from '../components/RelatedVideos';
 
 export default function VideoDetail() {
@@ -33,6 +34,7 @@ export default function VideoDetail() {
             </div>
 
             <p className="mt-4 rounded-xl bg-gray-100 p-3">{description}</p>
+            <Comments id={channelId} />
           </div>
         </section>
         <section className="related__list ml-6 w-1/4 lg:w-full lg:ml-0 lg:mt-9">
